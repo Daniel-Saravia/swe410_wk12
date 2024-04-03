@@ -1,0 +1,23 @@
+name: #Ryan Woodward - Remote Updates via GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Explore-GitHub-Actions
+    runs-on: ubuntu-lastest
+
+    steps: 
+      - name: Start of the RemoteLopes Job
+        run: echo "${{ github.actor }} is testing remote updates with RPI5"
+
+      - name: Display Event infomation
+        run: |
+          echo "This job was triggered by ${{ github.event_name }} event."
+          echo "The name of the branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - name: Check out Repository code
+        uses: action/checkout@v4
+        
