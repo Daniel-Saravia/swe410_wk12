@@ -21,3 +21,7 @@ jobs:
       - name: Check out Repository Code
         uses: actions/checkout@v4
 
+      - name: Build Rust Project
+        run: cargo build --release
+        working-directory: ./remote-lopes
+
